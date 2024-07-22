@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <section class="search">
+        <input type="text" placeholder="Enter city">
+        <img src="/icons/search.svg" alt="search icon">
+    </section>
+
+    <header class="header">
+        <div class="header-left">
+            <img class="weather-icon large" src="/icons/sun.svg" data-current-icon />
+            <div class="header-current-temp">
+                <span data-current-temp>50</span>&deg;
+                <h3 data-city-country>City, Country</h3>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="info">
+                <div class="label">HIGH</div>
+                <div><span data-current-high>50</span>&deg;</div>
+            </div>
+            <div class="info">
+                <div class="label">FL HIGH</div>
+                <div><span data-current-fl-high>50</span>&deg;</div>
+            </div>
+            <div class="info">
+                <div class="label">WIND</div>
+                <div><span data-current-wind>9</span><span class="sub-small">mph</span></div>
+            </div>
+            <div class="info">
+                <div class="label">LOW</div>
+                <div><span data-current-low>19</span>&deg;</div>
+            </div>
+            <div class="info">
+                <div class="label">FL LOW</div>
+                <div><span data-current-fl-low>11</span>&deg;</div>
+            </div>
+            <div class="info">
+                <div class="label">Precip</div>
+                <div><span data-current-precip>0.2</span><span class="sub-small">in</span></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="day-section" data-day-section>
+        <div class="day-card">
+            <img src="/icons/cloud.svg" class="weather-icon">
+            <div class="day">Monday</div>
+            <div>50&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="/icons/cloud.svg" class="weather-icon">
+            <div class="day">Tuesday</div>
+            <div>50&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="/icons/cloud.svg" class="weather-icon">
+            <div class="day">Wednesday</div>
+            <div>50&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="/icons/cloud.svg" class="weather-icon">
+            <div class="day">Thursday</div>
+            <div>50&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="/icons/cloud.svg" class="weather-icon">
+            <div class="day">Friday</div>
+            <div>50&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="/icons/cloud.svg" class="weather-icon">
+            <div class="day">Saturday</div>
+            <div>50&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="/icons/cloud.svg" class="weather-icon">
+            <div class="day">Sunday</div>
+            <div>50&deg;</div>
+        </div>
+    </section>
+
+    <template id="day-card-template">
+        <div class="day-card">
+            <img data-icon class="weather-icon">
+            <div class="day" data-day></div>
+            <div><span data-temp></span>&deg;<span></span> </div>
+        </div>
+    </template>
+
+    <div class="search-result">
+        <div class="label">WIND</div>
+        <div class="wind"><span data-search-wind>50</span><span class="search-wind"> mph</span></div>
+        <div class="label">HUMIDITY</div>
+        <div class="humidity"><span data-search-humidity>50</span><span class="search-humidity"> %</span></div>
+        <div class="temperature">50&deg;</div>
+        <div class="location">
+            <img src="/icons/sun.svg" data-icon class="weather-icon">
+            <h3>City, Country</h3>
+        </div>
+    </div>
+
+    <script src="/search.js"></script>
+</body>
+
+</html>
